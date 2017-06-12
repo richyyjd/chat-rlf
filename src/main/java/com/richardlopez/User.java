@@ -5,20 +5,30 @@ package main.java.com.richardlopez;
  */
 public class User extends Person {
 
+    public int id;
     public String email;
     public String nickname;
     public String password;
-    //public String typeOfUser;
+    public String typeOfUser;
 
     public User() {
+        this.id = 0;
     }
 
-
-    public User(String name, String lastname, String email, String nickname, String password) {
+    public User(String name, String lastname, String email, String nickname, String password, String typeOfUser) {
         super(name, lastname);
         this.email = email;
         this.nickname = nickname;
         this.password = password;
+        this.typeOfUser = typeOfUser;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getEmail() {
@@ -43,5 +53,13 @@ public class User extends Person {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getTypeOfUser() {
+        return typeOfUser;
+    }
+
+    public void setTypeOfUser(String typeOfUser) {
+        this.typeOfUser = typeOfUser;
     }
 }
