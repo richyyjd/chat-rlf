@@ -2,6 +2,7 @@ package main.java.com.richardlopez.Services;
 
 import main.java.com.richardlopez.User;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -39,13 +40,12 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public List<User> findAll() {
-        return null;
+        return new ArrayList<User>(users.values());
     }
 
 
     public int getRandomID(){
         int randomNum = ThreadLocalRandom.current().nextInt(1,  99 + 1);
-        //System.out.println("RANDOM: "+randomNum);
         return randomNum;
     }
 }

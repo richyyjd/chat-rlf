@@ -62,4 +62,9 @@ public class User extends Person {
     public void setTypeOfUser(String typeOfUser) {
         this.typeOfUser = typeOfUser;
     }
+
+    @Override
+    public String toString(){
+        return nickname;
+    }
 }
